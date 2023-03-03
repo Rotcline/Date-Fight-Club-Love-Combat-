@@ -46,10 +46,10 @@ public class FightController : MonoBehaviour
         }
         // Add combat action to queue
         if (Input.GetKey(KeyCode.L)) {
-            
+            actions.Enqueue("MediumSwordMid");
         }
         else if (Input.GetKey(KeyCode.K)) {
-
+            actions.Enqueue("MediumKickMid");
         }
         // Check if there's a current action, if normalizedTime is equal to or larger than 1, the animation has run it's course. 
         if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f) {
